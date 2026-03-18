@@ -1,14 +1,13 @@
 .newsletter {
   width: 100%;
   height: auto;
-  background-color: #f8f9fa;           
   padding: 60px 40px;
   border-top: 1px solid #e0e0e0;
   background-color: #EFF2F4; 
-  
+
 }
 
-.container {
+.newslettercontainer {
   margin: 0 auto;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,347 @@
+.pageWrapper {
+  display: block !important; /* Forces it out of any weird flex squishing */
+    height: auto !important;
+    min-height: 1000px;
+    padding-bottom: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    /* ✅ REMOVE any 'height: 100%' or 'height: 500px' if you have it */
+    height: auto; 
+    min-height: 600px; 
+}
+.cartMain {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 40px;
+}
+.cartCard {
+    background: #ffffff;
+    border: 1px solid #e3e8ee;
+    border-radius: 6px;
+    padding: 20px;
+    height: auto; 
+    margin-bottom: 20px;             
+}
+.cartTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.cartList {
+  background: white;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.cartItem {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e3e8ee;
+    gap: 20px;
+    text-align: left; 
+}
+
+.itemImg {
+  flex: 0 0 100px; 
+    width: 100px;    
+    height: 100px;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.itemImg img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.itemDetails {
+    flex: 1; 
+}
+
+
+.itemPricing {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+.itemDetails h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.itemMeta {
+  color: #8b96a5;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+
+.itemActions{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btnRemove {
+    background: white;
+    color: #fa3434;
+    border: 1px solid #e3e8ee;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btnRemove:hover {
+    background: #fff5f5;
+}
+
+.btnSave {
+    background: white;
+    color: #0d6efd;
+    border: 1px solid #e3e8ee;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btnSave:hover {
+    background: #f0f7ff;
+}
+
+
+.summaryCard {
+  background: white;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  padding: 20px;
+  height: fit-content;
+}
+.summaryRow {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #505050;
+    text-align: left;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #1c1c1c;
+}
+
+.checkoutBtn {
+  width: 100%;
+  background: #00b517; 
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.separator {
+    border: 0;
+    border-top: 1px solid #e3e8ee;
+    margin: 15px 0;
+}
+
+
+.couponCard {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.couponCard p{
+    font-weight: 20px;
+}
+
+.couponCard input {
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px solid #e3e8ee;
+    border-radius: 4px 0 0 4px;
+    width: 70%;
+}
+
+.couponCard button {
+    padding: 10px;
+    border: 1px solid #e3e8ee;
+    border-left: none;
+    background: white;
+    color: #0d6efd;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.cartFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btnBack {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btnRemoveAll {
+    background: white;
+    color: #0d6efd;
+    border: 1px solid #e3e8ee;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.featuresRow {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px; 
+    margin-top: 30px;
+    padding: 20px 0;
+    
+    /* ✅ ADD THIS LINE */
+    flex-shrink: 0;
+}
+/* .featuresRow {
+  margin-bottom: 100px; /* 🛡️ This forces the Newsletter to stay at least 100px away */
+
+
+.feature {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+}
+
+.iconCircle {
+    width: 48px;
+    height: 48px;
+    background-color: #e3e8ee; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b96a5; 
+    font-size: 20px;
+    flex-shrink: 0; 
+}
+
+.featureText h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1c1c1c;
+}
+
+.featureText p {
+    margin: 0;
+    font-size: 14px;
+    color: #8b96a5;
+}
+.savedForLaterCard {
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.savedTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.savedGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ Creates the 4 columns */
+  gap: 20px;
+}
+
+.savedItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.savedImgWrapper {
+  background: #f7f7f7;
+  border-radius: 6px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.savedImgWrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.savedPrice {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.savedText {
+  font-size: 14px;
+  color: #505050;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.moveToCartBtn {
+  background: white;
+  color: #0d6efd;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.moveToCartBtn:hover {
+  background: #f0f7ff;
+}

@@ -3,7 +3,7 @@ import styles from './Newsletter.module.css';
 const Newsletter = () => {
   return (
     <section className={styles.newsletter}>
-      <div className={styles.container}>
+      <div className={styles.newslettercontainer}>
         <div className={styles.textContent}>
           <h3 className={styles.title}>Subscribe to our Newsletter</h3>
           <p className={styles.description}>

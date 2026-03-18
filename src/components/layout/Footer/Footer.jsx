@@ -21,23 +21,23 @@ const Footer = () => {
             Quality products, fast delivery.
           </p>
           <div className={styles.socialIcons}>
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <img src={facebook3} alt="Facebook" className={styles.socialIcon} />
-    </a>
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <img src={instagram3} alt="Instagram" className={styles.socialIcon} />
-    </a>
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <img src={twitter} alt="Twitter" className={styles.socialIcon} />
-    </a>
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <img src={linkedin3} alt="Linkedin" className={styles.socialIcon} />
-    </a>
-    <a href="#" target="_blank" rel="noopener noreferrer">
-      <img src={youtube3} alt="Youtube" className={styles.socialIcon} />
-    </a>
-    {/* Add more if you have (YouTube, LinkedIn, etc.) */}
-  </div>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={facebook3} alt="Facebook" className={styles.socialIcon} />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={instagram3} alt="Instagram" className={styles.socialIcon} />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={twitter} alt="Twitter" className={styles.socialIcon} />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={linkedin3} alt="Linkedin" className={styles.socialIcon} />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={youtube3} alt="Youtube" className={styles.socialIcon} />
+            </a>
+            {/* Add more if you have (YouTube, LinkedIn, etc.) */}
+          </div>
         </div>
 
         {/* Column 2: Company */}
@@ -82,34 +82,34 @@ const Footer = () => {
 
         {/* Column 4: Follow Us */}
         <div className={styles.col}>
-  <h4 className={styles.colTitle}>Follow Us</h4>  {/* or keep "Follow Us" if you prefer */}
-  
-  <div className={styles.appBadges}>
-    <a 
-      href="#" 
-      target="_blank" 
-      rel="noopener noreferrer"
-    >
-      <img 
-        src={Google} 
-        alt="Get it on Google Play" 
-        className={styles.appBadge} 
-      />
-    </a>
+          <h4 className={styles.colTitle}>Follow Us</h4>  {/* or keep "Follow Us" if you prefer */}
 
-    <a 
-      href="#" 
-      target="_blank" 
-      rel="noopener noreferrer"
-    >
-      <img 
-        src={App} 
-        alt="Download on the App Store" 
-        className={styles.appBadge} 
-      />
-    </a>
-  </div>
-</div>
+          <div className={styles.appBadges}>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Google}
+                alt="Get it on Google Play"
+                className={styles.appBadge}
+              />
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={App}
+                alt="Download on the App Store"
+                className={styles.appBadge}
+              />
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Bottom bar */}
@@ -121,18 +121,18 @@ const Footer = () => {
         </div> */}
 
         <button className={styles.languageBtn}>
-                <img 
-                  src={Flag} 
-                  alt="English" 
-                  className={styles.languageFlag} 
-                />
-                English
-                <img 
-                  src={arrow} 
-                  alt="" 
-                  className={styles.arrowIcon} 
-                />
-              </button>
+          <img
+            src={Flag}
+            alt="English"
+            className={styles.languageFlag}
+          />
+          English
+          <img
+            src={arrow}
+            alt=""
+            className={styles.arrowIcon}
+          />
+        </button>
       </div>
     </footer>
   );

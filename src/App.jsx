@@ -1,30 +1,39 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css'
 import Header from './components/layout/Header'
 import Navbar from './components/layout/Navbar';
 import Newsletter from './components/layout/Newsletter';
 import Footer from './components/layout/Footer';
+import Home from './components/pages/Home';
+import ProductsList from './components/pages/ProductsList';
+import ProductDetails from './components/pages/ProductDetails';
+import Cart from './components/pages/Cart';
+import { products } from './data/products';
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Header/>
+      
+      <BrowserRouter>
+       <Header/>
       <Navbar/>
-
-      <main className="main-placeholder">
-        <div className="hero-placeholder">
-          <h1>Welcome to Your eCommerce Site</h1>
-         
-        </div>
-
-        {/* Some extra space so footer is not too close */}
-        <div className="spacer">
-          <p>Main content area (products, categories, etc.)</p>
-        </div>
-      </main>
+      <Routes>
+       
+        <Route path="/" element={<div className="content-wrapper">
+        <Home />
+      </div>} />
+        <Route path="/ProductsList/:categoryName" element={<ProductsList />} />
+        <Route path="/product/:id" element={<ProductDetails  product={products}/>} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <Newsletter/>
       <Footer/>
+      </BrowserRouter>
+      
+      
     </>
   );
 }
