@@ -18,25 +18,25 @@ const Header = () => {
 
     const pathParts = location.pathname.split('/');
     const categoryFromUrl = pathParts[pathParts.length - 1];
-
-
-    if (location.pathname.includes('ProductsList') && categoryFromUrl) {
+     if (location.pathname.includes('ProductsList') && categoryFromUrl) {
       setSelectedCategory(categoryFromUrl);
     } else {
       setSelectedCategory("");
     }
   }, [location]);
-  const handleChange = (e) => {
+const handleChange = (e) => {
     setSelectedCategory(e.target.value);
   };
   const navigate = useNavigate();
-  const handleSearch = () => {
-    if (selectedCategory === 'all') {
-      navigate('/ProductsList');
-    } else {
-      navigate(`/ProductsList/${selectedCategory}`);
-    }
-  };
+  const handleSearch = (e) => {
+  e.preventDefault(); 
+  
+  if (selectedCategory === 'all' || selectedCategory === '') {
+    navigate('/ProductsList');
+  } else {
+    navigate(`/ProductsList/${selectedCategory}`);
+  }
+};
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
@@ -62,7 +62,7 @@ const Header = () => {
           className={styles.searchInput}
         />
         <select className={styles.categorySelect} value={selectedCategory} onChange={handleChange} >
-          <option>All Categories</option>
+          <option value="all">All Categories</option>
           <option value="tech">Tech</option>
           <option value="interior">Interior</option>
           <option value="clothes">Clothes</option>
@@ -73,6 +73,32 @@ const Header = () => {
           Search
         </button>
       </form>
+      <nav className={styles.mobileCategoryNav}>
+        <button 
+          onClick={() => navigate('/ProductsList')} 
+          className={`${styles.navBtn} ${selectedCategory === 'all' ? styles.activeNav : ''}`}
+        >
+          All category
+        </button>
+        <button 
+          onClick={() => navigate('/ProductsList/Tech')} 
+          className={`${styles.navBtn} ${selectedCategory === 'Tech' ? styles.activeNav : ''}`}
+        >
+          Tech
+        </button>
+        <button 
+          onClick={() => navigate('/ProductsList/clothes')} 
+          className={`${styles.navBtn} ${selectedCategory === 'clothes' ? styles.activeNav : ''}`}
+        >
+          Clothes
+        </button>
+        <button 
+          onClick={() => navigate('/ProductsList/interior')} 
+          className={`${styles.navBtn} ${selectedCategory === 'interior' ? styles.activeNav : ''}`}
+        >
+          Interior
+        </button>
+      </nav>
       <div className={styles.actions}>
         {/* Each item is a column: icon + text */}
         <Link to="#" className={styles.actionItem}>
@@ -97,29 +123,45 @@ const Header = () => {
           <span className={styles.actionText}>My Cart</span>
         </Link>
       </div>
+      
       <div className={`${styles.sidebar} ${menuOpen ? styles.sidebarOpen : ''}`}>
-        <div className={styles.sidebarHeader}>
-          <img src={profile} alt="user" className={styles.sidebarUserIcon} />
-          <span>Sign in | Register</span>
-          <button className={styles.closeBtn} onClick={toggleMenu}>&times;</button>
-        </div>
-        <ul className={styles.sidebarLinks}>
-          <li onClick={toggleMenu}><Link to="/"><i className="fas fa-home"></i> Home</Link></li>
-          <li onClick={toggleMenu}><Link to="/categories"><i className="fas fa-list"></i> Categories</Link></li>
-          <li onClick={toggleMenu}><Link to="/favorites"><i className="fas fa-heart"></i> Favorites</Link></li>
-          <li onClick={toggleMenu}><Link to="/orders"><i className="fas fa-box"></i> My orders</Link></li>
-          <hr />
-          <li><i className="fas fa-globe"></i> English | USD</li>
-          <li><i className="fas fa-envelope"></i> Contact us</li>
-          <li><i className="fas fa-info-circle"></i> About</li>
-        </ul>
-      </div>
+  {/* Header Section */}
+  <div className={styles.sidebarHeader}>
+    <button className={styles.closeBtn} onClick={toggleMenu}>&times;</button>
+    <div className={styles.userAvatar}>
+      <i className="fas fa-user-circle"></i>
+    </div>
+    <div className={styles.signInText}>Sign in | Register</div>
+  </div>
+  
+  <ul className={styles.sidebarLinks}>
+    {/* Group 1: Main Navigation */}
+    <li><Link to="/"><i className="fas fa-home"></i> Home</Link></li>
+    <li><Link to="/categories"><i className="fas fa-list"></i> Categories</Link></li>
+    <li><Link to="/favorites"><i className="fas fa-heart"></i> Favorites</Link></li>
+    <li><Link to="/orders"><i className="fas fa-box-open"></i> My orders</Link></li>
+    
+    <div className={styles.divider}></div>
 
-      {/* 3. Overlay (Darken background when menu is open) */}
+    {/* Group 2: Settings & Support */}
+    <li><Link to="#"><i className="fas fa-globe"></i> English | USD</Link></li>
+    <li><Link to="#"><i className="fas fa-headset"></i> Contact us</Link></li>
+    <li><Link to="#"><i className="fas fa-building"></i> About</Link></li>
+    
+    <div className={styles.divider}></div>
+
+    {/* Group 3: Legal (Text only) */}
+    <li className={styles.plainLink}><Link to="#">User agreement</Link></li>
+    <li className={styles.plainLink}><Link to="#">Partnership</Link></li>
+    <li className={styles.plainLink}><Link to="#">Privacy policy</Link></li>
+  </ul>
+</div>
       {menuOpen && <div className={styles.overlay} onClick={toggleMenu}></div>}
     </header>
+    
 
   )
+  
 
 }
 export default Header

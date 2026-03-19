@@ -5,7 +5,7 @@ import { CartContext } from '../../../context/CartContext';
 import shirt from '../../../assets/images/shirt.png';
 
 const Cart = () => {
-    const { cartItems,savedItems,saveForLater,moveToCart, removeFromCart, clearCart } = useContext(CartContext);
+    const { cartItems, savedItems, saveForLater, moveToCart, removeFromCart, clearCart } = useContext(CartContext);
     const navigate = useNavigate();
 
     // Calculate Subtotal dynamically
@@ -97,33 +97,33 @@ const Cart = () => {
                         </div>
                     </div>
                     {/* Saved for Later Section */}
-<div className={styles.savedForLaterCard}>
-  <h3 className={styles.savedTitle}>Saved for later ({savedItems.length})</h3>
-  
-  {savedItems.length === 0 ? (
-    <p style={{color: '#8b96a5'}}>No items saved yet.</p>
-  ) : (
-    <div className={styles.savedGrid}>
-      {savedItems.map((item) => (
-        <div key={item.id} className={styles.savedItem}>
-          <div className={styles.savedImgWrapper}>
-            <img src={item.image} alt={item.title} />
-          </div>
-          <div className={styles.savedInfo}>
-            <p className={styles.savedPrice}>${item.price}</p>
-            <p className={styles.savedText}>{item.title}</p>
-            <button 
-              className={styles.moveToCartBtn}
-              onClick={() => moveToCart(item)}
-            >
-              <i className="fas fa-shopping-cart"></i> Move to cart
-            </button>
-          </div>
-        </div>
-      ))}
-    </div>
-  )}
-</div>
+                    <div className={styles.savedForLaterCard}>
+                        <h3 className={styles.savedTitle}>Saved for later ({savedItems.length})</h3>
+
+                        {savedItems.length === 0 ? (
+                            <p style={{ color: '#8b96a5' }}>No items saved yet.</p>
+                        ) : (
+                            <div className={styles.savedGrid}>
+                                {savedItems.map((item) => (
+                                    <div key={item.id} className={styles.savedItem}>
+                                        <div className={styles.savedImgWrapper}>
+                                            <img src={item.image} alt={item.title} />
+                                        </div>
+                                        <div className={styles.savedInfo}>
+                                            <p className={styles.savedPrice}>${item.price}</p>
+                                            <p className={styles.savedText}>{item.title}</p>
+                                            <button
+                                                className={styles.moveToCartBtn}
+                                                onClick={() => moveToCart(item)}
+                                            >
+                                                <i className="fas fa-shopping-cart"></i> Move to cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
 
 
@@ -132,7 +132,7 @@ const Cart = () => {
                         <p>Have a coupon?</p>
                         <div className={styles.couponInput}>
                             <input type="text" placeholder="Add coupon" />
-                            <button>Apply</button>
+                            <button className={styles.btnApply}>Apply</button>
                         </div>
                     </div>
                     <div className={styles.summaryCard}>

@@ -39,7 +39,14 @@ const Home = () => {
     { name: "Great Britain", url: "shopname.co.uk", code: "gb" },
   ];
   return (
+    
     <main className={styles.home}>
+      <div className={styles.mobileCategoryNav}>
+        <button className={styles.activeTab}>All category</button>
+        <button>Gadgets</button>
+        <button>Clothes</button>
+        <button>Accessories</button>
+      </div>
       <div className={styles.sectionCard}>
         <div className={styles.bannerLayout}>
 
@@ -48,7 +55,7 @@ const Home = () => {
               <li><Link to="/ProductsList/Tech" className={styles.categoryLink}>Tech</Link></li>
               <li><Link to="/ProductsList/clothes" className={styles.categoryLink}>Clothes</Link></li>
               <li><Link to="/ProductsList/interior" className={styles.categoryLink}>Interior</Link></li>
-              <li><Link to="/ProductsList/Tech" className={styles.categoryLink}>Tech</Link></li>
+              <li><Link to="/ProductsList/All Categories" className={styles.categoryLink}>All Categories</Link></li>
               <li><Link to="/ProductsList/clothes" className={styles.categoryLink}>Clothes</Link></li>
               <li><Link to="/ProductsList/interior" className={styles.categoryLink}>Interior</Link></li>
               <li><Link to="/ProductsList/Tech" className={styles.categoryLink}>Tech</Link></li>

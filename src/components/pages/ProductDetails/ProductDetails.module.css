@@ -499,3 +499,91 @@
 .bannerBtn:hover {
   background: #e07e15;
 }
+/* --- Tablet and Mobile View (max-width: 992px) --- */
+@media (max-width: 992px) {
+  .mainCard {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .bottomSection {
+    grid-template-columns: 1fr; 
+  }
+
+  .relatedGrid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+/* --- Small Mobile View (max-width: 600px) --- */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  
+  .galleryCol {
+    min-width: 100%;
+  }
+
+  
+  .productTitle {
+    font-size: 18px;
+  }
+
+  .priceGrid {
+    gap: 15px; 
+    flex-wrap: wrap;
+  }
+
+  .statsRow {
+    flex-wrap: wrap; 
+    gap: 5px;
+  }
+
+  
+  .specTable td:first-child {
+    width: 100px; 
+  }
+
+  
+  .tabHeader {
+    overflow-x: auto; /* Allow horizontal scroll for tabs if they overflow */
+    white-space: nowrap;
+  }
+
+  .tabHeader button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .relatedImgContainer {
+    height: 120px;
+  }
+
+  
+  .blueBanner {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .bannerInfo h2 {
+    font-size: 18px;
+  }
+
+  
+  .actionRow {
+    flex-direction: column; 
+  }
+
+  .btnAddToCart {
+    width: 100%;
+    justify-content: center;
+  }
+}

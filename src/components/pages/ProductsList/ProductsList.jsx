@@ -1,6 +1,6 @@
 // import React from 'react';
 import React, { useState } from 'react';
-import { Link,useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styles from './ProductsList.module.css';
 import ProductRowCard from './ProductRowCard';
 import ProductGridCard from './ProductGridCard';
@@ -18,8 +18,12 @@ const FilterGroup = ({ title, items, isCheckbox }) => (
               <input type="checkbox" /> {item}
             </label>
           ) : (
-            <Link to={`/ProductsList/${item}`} 
-              className={styles.filterLink}>{item}</Link>
+            <Link
+              to={item === "All Categories" ? "/ProductsList" : `/ProductsList/${item}`}
+              className={styles.filterLink}
+            >
+              {item}
+            </Link>
           )}
         </li>
       ))}
@@ -35,19 +39,19 @@ const ProductList = () => {
   const [viewMode, setViewMode] = useState('grid');
 
   const [visibleCount, setVisibleCount] = useState(6);
-  const filteredProducts = categoryName
+  const filteredProducts = categoryName && categoryName !== "All Categories"
     ? products.filter(p => p.category?.toLowerCase() === categoryName.toLowerCase())
     : products;
 
   const handleShowMore = () => {
-    setVisibleCount(prev => prev + 3); // Adds 3 more every click
+    setVisibleCount(prev => prev + 3);
   };
   const handleShowLess = () => {
     setVisibleCount(6); // Reset back to the original number
   };
 
   const visibleProducts = filteredProducts.slice(0, visibleCount);
-  const categories = ["Tech", "Clothes", "Interior", "Modern tech"];
+  const categories = ["Tech", "Clothes", "Interior", "All Categories"];
   const brands = ["Samsung", "Apple", "Huawei", "Pocco", "Lenovo"];
 
   return (
@@ -116,7 +120,9 @@ const ProductList = () => {
 
         <main className={styles.productSection}>
           <div className={styles.topStatsBar}>
-            <span>12,911 items in <b>Mobile accessory</b></span>
+            <span>
+              {filteredProducts.length.toLocaleString()} items in <b>{categoryName ? categoryName : "All Categories"}</b>
+            </span>
             <div className={styles.controls}>
               <label><input type="checkbox" /> Verified only</label>
               <select className={styles.sortSelect}>
