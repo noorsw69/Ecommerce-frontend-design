@@ -279,10 +279,8 @@
 
 .greetingBox {
   background-color: #f0f8ff;
-  /* light blue from screenshot */
   border-radius: 12px;
   padding: 10px;
-
   text-align: center;
   height: 150px;
 }
@@ -479,10 +477,12 @@
 .mobileCategoryNav {
   display: none;
 }
+
 .sourceNowMobileBar {
   display: none;
 }
-.showMobileOnly{
+
+.showMobileOnly {
   display: none;
 }
 
@@ -501,39 +501,43 @@
     width: 100%;
   }
 
-  .bannerLayout
-  {
+  .bannerLayout {
     display: block !important;
     padding: 0 !important;
     width: 100%;
   }
+
   .categoryProductLayout {
     display: flex !important;
     flex-direction: column !important;
     padding: 0 !important;
     width: 100%;
   }
-   .sidebar,
+
+  .sidebar,
   .bannerRight {
     display: none !important;
   }
 
   .categorySidebar {
-    display: block !important; /* Shows the title bar */
+    display: block !important;
     width: 100% !important;
     background: #fff;
     border-bottom: 1px solid #e0e0e0;
-    order: 1; /* Title bar stays at top */
+    order: 1;
   }
+
   .categoryBgImg {
-    display: none !important; /* Hide the big image on mobile */
+    display: none !important;
   }
+
   .categoryOverlay {
     position: static !important;
     padding: 15px !important;
     display: flex !important;
     flex-direction: column !important;
   }
+
   .categoryTitle {
     order: 1;
     font-size: 16px !important;
@@ -541,8 +545,9 @@
     color: #1c1c1c;
     white-space: nowrap;
   }
+
   .sourceBtn {
-    order: 3 !important; 
+    order: 3 !important;
     display: block !important;
     width: 100%;
     text-align: left;
@@ -555,7 +560,7 @@
     box-shadow: none !important;
   }
 
-  
+
   .hideMobile {
     display: none !important;
   }
@@ -603,29 +608,30 @@
     font-size: 14px !important;
   }
 
-  
+
   .categoryGrid {
     order: 2;
-    display: flex !important; 
+    display: flex !important;
     flex-direction: row !important;
-    overflow-x: auto !important; 
-    gap: 0; 
+    overflow-x: auto !important;
+    gap: 0;
     background-color: #fff;
-    scrollbar-width: none; 
+    scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
-  
+
   }
+
   .categoryGrid::-webkit-scrollbar {
     display: none;
   }
 
   .smallProductCard {
-    flex: 0 0 145px !important; 
+    flex: 0 0 145px !important;
     display: flex !important;
-    flex-direction: column !important; 
-    align-items: center !important;  
+    flex-direction: column !important;
+    align-items: center !important;
     justify-content: flex-start !important;
-    height: 200px !important;         
+    height: 200px !important;
     padding: 15px !important;
     background: #fff;
     border: none !important;
@@ -633,10 +639,10 @@
   }
 
   .productInfo {
-    order: 2; 
+    order: 2;
     width: 100% !important;
     margin-top: 10px;
-    text-align: center !important; 
+    text-align: center !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -653,12 +659,12 @@
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    align-items: flex-start !important; 
+    align-items: flex-start !important;
     padding: 30px 25px !important;
     width: 100% !important;
     min-height: 160px !important;
-    background: linear-gradient(90deg, rgba(43, 126, 248, 0.9) 0%, rgba(43, 126, 248, 0.4) 100%), 
-                url('../../../assets/images/background.png') !important; 
+    background: linear-gradient(90deg, rgba(43, 126, 248, 0.9) 0%, rgba(43, 126, 248, 0.4) 100%),
+      url('../../../assets/images/background.png') !important;
     background-size: cover !important;
     background-position: center !important;
     border-radius: 6px !important;
@@ -667,7 +673,7 @@
     overflow: hidden !important;
   }
 
-  
+
   .ctaTitle {
     color: #ffffff !important;
     font-size: 20px !important;
@@ -675,10 +681,10 @@
     line-height: 1.3 !important;
     margin: 0 0 15px 0 !important;
     text-align: left !important;
-    max-width: 260px !important; 
+    max-width: 260px !important;
   }
 
-  
+
   .ctaDescription {
     display: none !important;
   }
@@ -689,14 +695,14 @@
     align-items: flex-start !important;
     width: 100% !important;
   }
- 
+
   .ctaInput {
-    display: none !important; 
+    display: none !important;
   }
 
   .ctaButton {
     display: inline-block !important;
-    width: auto !important; 
+    width: auto !important;
     padding: 10px 20px !important;
     background: #007bff !important;
     color: #fff !important;
