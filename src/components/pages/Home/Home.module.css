@@ -550,9 +550,7 @@
     box-shadow: none !important;
   }
 
-  .sourceBtn::after {
-    content: ' →';
-  }
+  
   .hideMobile {
     display: none !important;
   }
