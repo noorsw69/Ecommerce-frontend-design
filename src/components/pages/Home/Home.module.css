@@ -482,6 +482,11 @@
 .sourceNowMobileBar {
   display: none;
 }
+.showMobileOnly{
+  display: none;
+}
+
+
 @media (max-width: 768px) {
 
   .home {
