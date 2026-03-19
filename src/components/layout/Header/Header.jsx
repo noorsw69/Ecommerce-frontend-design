@@ -75,10 +75,16 @@ const handleChange = (e) => {
       </form>
       <nav className={styles.mobileCategoryNav}>
         <button 
-          onClick={() => navigate('/ProductsList')} 
-          className={`${styles.navBtn} ${selectedCategory === 'all' ? styles.activeNav : ''}`}
-        >
-          All category
+         onClick={() => {
+    // 1. Reset the category state to 'all'
+    setSelectedCategory('all'); 
+    
+    // 2. Navigate to the products page
+    navigate('/ProductsList', { state: { category: 'all' } }); 
+  }} 
+  className={`${styles.navBtn} ${selectedCategory === 'all' ? styles.activeNav : ''}`}
+>
+  All category
         </button>
         <button 
           onClick={() => navigate('/ProductsList/Tech')} 

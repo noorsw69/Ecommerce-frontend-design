@@ -39,14 +39,8 @@ const Home = () => {
     { name: "Great Britain", url: "shopname.co.uk", code: "gb" },
   ];
   return (
-    
+
     <main className={styles.home}>
-      <div className={styles.mobileCategoryNav}>
-        <button className={styles.activeTab}>All category</button>
-        <button>Gadgets</button>
-        <button>Clothes</button>
-        <button>Accessories</button>
-      </div>
       <div className={styles.sectionCard}>
         <div className={styles.bannerLayout}>
 
@@ -113,80 +107,82 @@ const Home = () => {
       <div className={styles.sectionCard}>
         <div className={styles.categoryProductLayout}>
           <div className={styles.categorySidebar}>
-            <img src={grid1} alt=""  className={styles.categoryBgImg} />
+            <img src={grid1} alt="" className={styles.categoryBgImg} />
             <div className={styles.categoryOverlay}>
               <h3 className={styles.categoryTitle}>Home and outdoor</h3>
-              <button className={styles.sourceBtn}>Source now</button>
+              <button className={`${styles.sourceBtn} ${styles.hideMobile}`}>Source now</button>
             </div>
           </div>
           <div className={styles.categoryGrid}>
-<Link to="/product/17" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Soft chairs</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={chair} alt="" className={styles.smallProductImg} />
-            </div></Link>
+            <Link to="/product/17" className={styles.cardLink}>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Soft chairs</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={chair} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/16" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Sofa</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={sofa} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Sofa</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={sofa} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/13" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>lamp</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={lamp} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>lamp</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={lamp} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/12" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Tree</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={tree} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Tree</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={tree} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/10" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Pot</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={pot} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Pot</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={pot} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/14" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Coffee</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={coffe} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Coffee</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={coffe} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/11" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Juicer</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={juicer} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Juicer</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={juicer} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/15" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Home</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Home</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={home} alt="" className={styles.smallProductImg} />
               </div>
-              <img src={home} alt="" className={styles.smallProductImg} />
-            </div>
             </Link>
-
           </div>
+          <button className={`${styles.sourceBtn} ${styles.showMobileOnly}`}>
+            Source now →
+          </button>
         </div>
       </div>
 
@@ -196,75 +192,78 @@ const Home = () => {
             <img src={grid2} alt="" className={styles.categoryBgImg} />
             <div className={styles.categoryOverlay}>
               <h3 className={styles.categoryTitle}>Consumer electronics</h3>
-              <button className={styles.sourceBtn}>Source now</button>
+              <button className={`${styles.sourceBtn} ${styles.hideMobile}`}>Source now</button>
             </div>
           </div>
           <div className={styles.categoryGrid}>
             <Link to="/product/4" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>laptop</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={laptop} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>laptop</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={laptop} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/2" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>smartphone</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={smartphone} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>smartphone</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={smartphone} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/8" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>headphones</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={headphone2} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>headphones</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={headphone2} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/9" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>headphones</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={headphones} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>headphones</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={headphones} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/5" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>tablet</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={tablet} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>tablet</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={tablet} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/3" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Smartwatch</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={smartwatch} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Smartwatch</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={smartwatch} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/6" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Electric kettle</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={electrickettle} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Electric kettle</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={electrickettle} alt="" className={styles.smallProductImg} />
+              </div></Link>
             <Link to="/product/1" className={styles.cardLink}>
-            <div className={styles.smallProductCard}>
-              <div className={styles.productInfo}>
-                <p className={styles.smallProductName}>Samsung</p>
-                <p className={styles.smallProductPrice}>From USD 19</p>
-              </div>
-              <img src={samsung} alt="" className={styles.smallProductImg} />
-            </div></Link>
+              <div className={styles.smallProductCard}>
+                <div className={styles.productInfo}>
+                  <p className={styles.smallProductName}>Samsung</p>
+                  <p className={styles.smallProductPrice}>From USD 19</p>
+                </div>
+                <img src={samsung} alt="" className={styles.smallProductImg} />
+              </div></Link>
           </div>
+          <button className={`${styles.sourceBtn} ${styles.showMobileOnly}`}>
+            Source now →
+          </button>
         </div>
       </div>
       <div className={styles.sectionCard}>
