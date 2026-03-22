@@ -71,7 +71,6 @@ main.main-placeholder {
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
-  /* 1. Remove the 40px side padding from the main placeholder */
   body .content-wrapper {
     width: 100% !important;
     max-width: 100vw !important;
@@ -83,7 +82,6 @@ main.main-placeholder {
     padding: 20px 0 !important;
   }
 
-  /* 3. Global safety check for any other hidden padding */
   #root, main {
     padding-left: 0 !important;
     padding-right: 0 !important;

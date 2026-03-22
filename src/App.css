@@ -41,7 +41,7 @@
   color: #888;
 }
 @media (max-width: 768px) {
-  /* 1. Reset the main wrapper/page container */
+  
   .home, 
   .mainContainer, 
   .appWrapper {
@@ -49,21 +49,20 @@
     padding-right: 0 !important;
     margin: 0 !important;
     width: 100% !important;
-    overflow-x: hidden; /* This prevents any tiny side-scrolling */
+    overflow-x: hidden; 
   }
 
-  /* 2. Force the section cards to fill the screen */
+  
   .sectionCard {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    border-radius: 0 !important; /* Removes rounded corners for a flush look */
+    border-radius: 0 !important; 
     border-left: none !important;
     border-right: none !important;
   }
   
-  /* 3. Re-add small padding ONLY to text elements */
-  /* This prevents your text from touching the very edge of the glass */
+  
   .categoryTitle, 
   .sourceNowLink, 
   .ctaTitle {
