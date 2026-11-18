@@ -1,16 +1,37 @@
-# React + Vite
+# E-Commerce Frontend - React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive E-Commerce frontend website where users can browse products, add items to cart, and see live price calculation.
 
-Currently, two official plugins are available:
+Built as a frontend design project to practice real-world React concepts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
+👉 [Click here to view live website](https://ecommerce-frontend-ten-chi.vercel.app/)
 
-## React Compiler
+## Features
+- Browse products by category
+- Product detail view
+- Add to Cart / Remove from Cart
+- Increase / Decrease quantity in cart
+- Live price calculation - Total price updates automatically with quantity
+- Cart total and subtotal calculation
+- Search and filter products
+- Checkout button (UI only - checkout functionality not implemented yet)
+- Fully responsive design for mobile and desktop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
+- `components/` - Reusable UI components (Navbar, Product Card, Cart, Footer, etc.)
+- `context/` - Cart Context for global state management
+- `data/` - Product data
+- `assets/` - Images and static files
 
-## Expanding the ESLint configuration
+## Technologies Used
+- React.js
+- JavaScript (ES6+)
+- CSS for styling
+- Vite
+- Vercel for deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run Locally
+1. Clone the repo
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
