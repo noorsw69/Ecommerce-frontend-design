@@ -34,4 +34,4 @@ Built as a frontend design project to practice real-world React concepts.
 ## How to Run Locally
 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+git clone https://github.com/noorsw69/Ecommerce-frontend-design.git
